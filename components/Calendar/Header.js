@@ -49,11 +49,7 @@ const Header = ({ selected, setSelected, upcomingDates }) => {
       >
         <View style={[styles.seperator, { borderBottomColor: "#fff" }]} />
         <ScrollView
-          style={{
-            flex: 1,
-            display: "flex",
-            flexDirection: "row",
-          }}
+          style={styles.options}
           horizontal={true}
           showsHorizontalScrollIndicator
         >

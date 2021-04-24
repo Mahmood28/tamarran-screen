@@ -69,12 +69,13 @@ const ActivityDetails = ({ navigation }) => {
         </ScrollView>
         <TopSection />
         <View
-          style={[styles.details, { height: 50 }]}
+          style={[styles.details, { height: 60 }]}
           onLayout={(event) => {
             setBottomActions(event.nativeEvent.layout);
           }}
         >
           <Pressable
+            android_ripple={{ color: "grey" }}
             onPress={() => navigation.navigate("Calendar")}
             style={styles.bookingButton}
           >

@@ -36,7 +36,10 @@ const Header = ({
       {!background && (
         <>
           <View>
-            <Pressable onPress={() => Alert.alert("Previous Page")}>
+            <Pressable
+              android_ripple={{ color: "grey" }}
+              onPress={() => Alert.alert("Previous Page")}
+            >
               <Icon name="arrow-left" size={22} color="white" />
             </Pressable>
           </View>
@@ -50,6 +53,7 @@ const Header = ({
               />
             </Pressable>
             <Pressable
+              android_ripple={{ color: "grey" }}
               onPress={() =>
                 Share.share({
                   message: "Activity Title http://app.tamarran.com/info/bh4296",

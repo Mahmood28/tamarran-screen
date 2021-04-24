@@ -56,6 +56,48 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     flexDirection: "row",
   },
+  footer: {
+    height: 80,
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    zIndex: 999,
+  },
+  buttonContainer: {
+    backgroundColor: "#fff",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginHorizontal: 10,
+    padding: 20,
+  },
+  priceTag: {
+    color: "#ff4500",
+    fontSize: 22,
+    fontWeight: "bold",
+    alignSelf: "flex-end",
+  },
+  bookingButton: {
+    minWidth: 150,
+    backgroundColor: "#0a7a95",
+    alignItems: "center",
+    paddingVertical: 10,
+    paddingHorizontal: 65,
+  },
+  buttonGroup: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    flex: 1,
+    marginRight: 5,
+    marginBottom: 5,
+    padding: 7,
+    borderRadius: 2,
+    borderWidth: 1,
+    borderColor: "grey",
+    width: 70,
+  },
 });
 
 export default styles;
