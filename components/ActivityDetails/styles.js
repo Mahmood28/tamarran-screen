@@ -101,8 +101,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#474747",
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingVertical: 10,
     borderRadius: 12,
   },
 });

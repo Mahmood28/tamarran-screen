@@ -3,7 +3,15 @@ const data = {
   organisation: "A'ali Sports Club",
   category: "Football",
   rating: 5,
-  days: ["Sunday", "Monday", "Tuesday", "Thursday", "Saturday"],
+  days: [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ],
   images: [
     "https://guardian.ng/wp-content/uploads/2020/09/football-897x598.jpg",
     "https://www.foreverlawn.com/wp-content/uploads/2019/01/DSC_0008.jpg",

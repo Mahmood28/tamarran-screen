@@ -22,7 +22,7 @@ import styles from "./styles";
 
 const { width, height } = Dimensions.get("screen");
 
-const ActivityDetails = () => {
+const ActivityDetails = ({ navigation }) => {
   const [bottomActions, setBottomActions] = useState(null);
   const [image, setImage] = useState(null);
   const [favourite, setFavourite] = useState(false);
@@ -48,7 +48,7 @@ const ActivityDetails = () => {
   ));
 
   return (
-    <>
+    <View style={{ flex: 1 }}>
       <Animated.ScrollView
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { y: scrollY } } }],
@@ -75,7 +75,7 @@ const ActivityDetails = () => {
           }}
         >
           <Pressable
-            onPress={() => Alert.alert("Booking Page")}
+            onPress={() => navigation.navigate("Calendar")}
             style={styles.bookingButton}
           >
             <Text
@@ -89,8 +89,16 @@ const ActivityDetails = () => {
       </Animated.ScrollView>
       {bottomActions && (
         <>
-          <UpperStickyButton topEdge={topEdge} scrollY={scrollY} />
-          <LowerStickyButton bottomEdge={bottomEdge} scrollY={scrollY} />
+          <UpperStickyButton
+            topEdge={topEdge}
+            scrollY={scrollY}
+            navigation={navigation}
+          />
+          <LowerStickyButton
+            bottomEdge={bottomEdge}
+            scrollY={scrollY}
+            navigation={navigation}
+          />
         </>
       )}
       {image && (
@@ -103,7 +111,7 @@ const ActivityDetails = () => {
           <Header favourite={favourite} setFavourite={setFavourite} />
         </>
       )}
-    </>
+    </View>
   );
 };
 
