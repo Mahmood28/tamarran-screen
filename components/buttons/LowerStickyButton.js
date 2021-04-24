@@ -1,9 +1,9 @@
 import React from "react";
 // Styling
-import { View, Text, Alert, Animated, Pressable } from "react-native";
-import styles from "../ActivityDetails.js/styles";
+import { View, Text, Animated, Pressable } from "react-native";
+import styles from "../ActivityDetails/styles";
 
-const LowerStickyButton = ({ bottomEdge, scrollY }) => {
+const LowerStickyButton = ({ bottomEdge, scrollY, navigation }) => {
   return (
     <Animated.View
       style={{
@@ -12,6 +12,7 @@ const LowerStickyButton = ({ bottomEdge, scrollY }) => {
         bottom: 0,
         left: 0,
         right: 0,
+        zIndex: 999,
         transform: [
           {
             translateY: scrollY.interpolate({
@@ -30,7 +31,8 @@ const LowerStickyButton = ({ bottomEdge, scrollY }) => {
     >
       <View style={[styles.details, { backgroundColor: "white" }]}>
         <Pressable
-          onPress={() => Alert.alert("Booking Page")}
+          android_ripple={{ color: "grey" }}
+          onPress={() => navigation.navigate("Calendar")}
           style={styles.bottomBookingButton}
         >
           <Text style={{ color: "white", fontSize: 16, fontWeight: "bold" }}>
