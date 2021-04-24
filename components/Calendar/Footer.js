@@ -1,4 +1,5 @@
 import React from "react";
+// Styling
 import { View, Text, Pressable, Alert } from "react-native";
 import styles from "./styles";
 

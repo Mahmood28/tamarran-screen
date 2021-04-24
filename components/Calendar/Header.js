@@ -1,7 +1,8 @@
 import React from "react";
+import moment from "moment";
+// Styling
 import { View, Text, Pressable, ScrollView } from "react-native";
 import styles from "./styles";
-import moment from "moment";
 
 const Header = ({ selected, setSelected, upcomingDates }) => {
   const dateCards = upcomingDates.map((date, index) => {

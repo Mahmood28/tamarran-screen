@@ -1,6 +1,7 @@
 import React from "react";
-import { Text, Pressable } from "react-native";
 import moment from "moment";
+// Styling
+import { Text, Pressable } from "react-native";
 import styles from "./styles";
 
 const TimeButtons = ({ selected, setSelected, times }) => {

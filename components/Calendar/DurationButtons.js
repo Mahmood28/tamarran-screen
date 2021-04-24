@@ -1,5 +1,7 @@
 import React from "react";
+// Styling
 import { Text, Pressable } from "react-native";
+import styles from "./styles";
 
 const DurationButtons = ({ selected, setSelected, durations }) => {
   return durations.map((duration, index) => {
